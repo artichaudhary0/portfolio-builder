@@ -1,4 +1,3 @@
-import React from 'react';
 import type { Skill } from '../types';
 
 interface SkillsProps {

@@ -1,9 +1,17 @@
-import React from 'react';
 import { Plus, X } from 'lucide-react';
 
+interface Experience {
+  id: string;
+  company: string;
+  position: string;
+  startDate: string;
+  endDate: string;
+  description: string;
+}
+
 interface ExperienceFormProps {
-  experience: FormData['experience'];
-  onChange: (experience: FormData['experience']) => void;
+  experience: Experience[];
+  onChange: (experience: Experience[]) => void;
 }
 
 export function ExperienceForm({ experience, onChange }: ExperienceFormProps) {

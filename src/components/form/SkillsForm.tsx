@@ -1,11 +1,11 @@
-import React from 'react';
 import { Plus, X } from 'lucide-react';
 import { Suggestions } from '../common/Suggestions';
 import { skillSuggestions } from '../../data/suggestions';
+import { Skill } from '../../types';
 
 interface SkillsFormProps {
-  skills: FormData['skills'];
-  onChange: (skills: FormData['skills']) => void;
+  skills: Skill[];
+  onChange: (skills: Skill[]) => void;
 }
 
 export function SkillsForm({ skills, onChange }: SkillsFormProps) {
@@ -66,7 +66,7 @@ export function SkillsForm({ skills, onChange }: SkillsFormProps) {
                 placeholder="e.g., React"
               />
               <Suggestions
-                items={skillSuggestions[skill.category]}
+                items={skillSuggestions[skill.category as keyof typeof skillSuggestions]}
                 onSelect={(item) => handleSuggestionSelect(index, item)}
                 className="mt-2"
               />

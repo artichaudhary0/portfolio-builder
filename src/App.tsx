@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Briefcase, Code, Layout, Share } from 'lucide-react';
 import { FormWizard } from './components/form/FormWizard';
 import { Header } from './components/Header';
@@ -76,7 +76,7 @@ export function App() {
         </header>
         <FormWizard 
           onComplete={handleFormComplete}
-          initialData={isEditing ? formData : undefined}
+          initialData={isEditing && formData ? formData : undefined}
         />
         <Footer />
       </div>

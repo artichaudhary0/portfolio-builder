@@ -1,4 +1,3 @@
-import React from 'react';
 import { Download, Share2, Mail, Phone, MapPin, Globe } from 'lucide-react';
 import type { FormData } from '../../types/form';
 
@@ -115,7 +114,7 @@ export function CVGenerator({ data }: CVGeneratorProps) {
             <div className="mb-12">
               <h2 className="text-2xl font-bold mb-6 text-gray-800">Experience</h2>
               <div className="space-y-6">
-                {data.experience.map((exp, index) => (
+                {data.experience.map((exp, _index) => (
                   <div key={exp.id} className="relative pl-8 pb-8 border-l-2 border-indigo-200 last:pb-0">
                     <div className="absolute left-[-9px] top-0 w-4 h-4 bg-indigo-600 rounded-full" />
                     <div className="bg-gray-50 p-6 rounded-lg">

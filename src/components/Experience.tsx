@@ -1,4 +1,3 @@
-import React from 'react';
 import { Briefcase } from 'lucide-react';
 import type { Experience as ExperienceType } from '../types';
 

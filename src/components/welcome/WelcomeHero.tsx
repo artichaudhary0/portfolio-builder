@@ -1,4 +1,3 @@
-import React from 'react';
 import { ArrowRight, Code, Briefcase, Star } from 'lucide-react';
 
 interface WelcomeHeroProps {

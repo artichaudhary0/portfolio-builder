@@ -1,18 +1,29 @@
-import React from 'react';
 import { Plus, X } from 'lucide-react';
 import { Suggestions } from '../common/Suggestions';
 import { projectTagSuggestions } from '../../data/suggestions';
 
+interface Project {
+  link: string;
+  id: string;
+  title: string;
+  description: string;
+  imageUrl: string;
+  tags: string[];
+}
+
 interface ProjectFormProps {
-  projects: FormData['projects'];
-  onChange: (projects: FormData['projects']) => void;
+  projects: Project[];
+  onChange: (projects: Project[]) => void;
 }
 
 export function ProjectForm({ projects, onChange }: ProjectFormProps) {
   const addProject = () => {
     onChange([
       ...projects,
-      { id: crypto.randomUUID(), title: '', description: '', imageUrl: '', tags: [] }
+      {
+        id: crypto.randomUUID(), title: '', description: '', imageUrl: '', tags: [],
+        link: ''
+      }
     ]);
   };
 

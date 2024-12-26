@@ -1,8 +1,13 @@
-import React from 'react';
+interface Contact {
+  name: string;
+  email: string;
+  phone: string;
+  location: string;
+}
 
 interface ContactFormProps {
-  contact: FormData['contact'];
-  onChange: (contact: FormData['contact']) => void;
+  contact: Contact;
+  onChange: (contact: Contact) => void;
 }
 
 export function ContactForm({ contact, onChange }: ContactFormProps) {
