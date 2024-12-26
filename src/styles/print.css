@@ -1,0 +1,36 @@
+/* Print styles */
+@media print {
+  @page {
+    margin: 2cm;
+  }
+
+  body {
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+
+  /* Hide non-CV elements */
+  header,
+  nav,
+  button,
+  .no-print {
+    display: none !important;
+  }
+
+  /* CV specific styles */
+  #cv-content {
+    padding: 0 !important;
+    margin: 0 !important;
+    box-shadow: none !important;
+  }
+
+  /* Ensure text is black for better printing */
+  * {
+    color: black !important;
+  }
+
+  /* Preserve page breaks */
+  .page-break {
+    page-break-before: always;
+  }
+}
